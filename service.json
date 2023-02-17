@@ -20,8 +20,7 @@
             ],
             "securityGroups": [
                 "sg-02e4fb9d70cc541f6"
-            ],
-            "assignPublicIp": "ENABLED"
+            ]
         }
     },
     "schedulingStrategy": "REPLICA",

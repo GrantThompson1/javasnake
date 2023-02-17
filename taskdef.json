@@ -2,7 +2,7 @@
     "containerDefinitions": [ 
        { 
           "essential": true,
-          "image": "<FRONTEND>",
+          "image": "<frontend>",
           "logConfiguration": { 
              "logDriver": "awslogs",
              "options": { 
