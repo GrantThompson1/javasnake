@@ -9,7 +9,7 @@ phases:
   build:
     commands:
        # Building Frontend
-       - cd $CODEBUILD_SRC_DIR/frontend
+       - cd $CODEBUILD_SRC_DIR
        - docker build -t $ECR_REPO_FRONTEND_URI:$TAG .
        - docker push $ECR_REPO_FRONTEND_URI:$TAG
        - IMAGE_URI_FRONTEND=$ECR_REPO_FRONTEND_URI:$TAG
