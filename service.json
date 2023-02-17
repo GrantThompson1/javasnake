@@ -1,0 +1,39 @@
+{
+    "cluster": "javasnake",
+    "serviceName": "javasnake-service",
+    "taskDefinition": "javasnake-td:1",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:997477333591:targetgroup/javasnake-tg1/c6892cb40748ee51",
+            "containerName": "frontend",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "FARGATE",
+    "platformVersion": "LATEST",
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-0a0968ba2faba93ed",
+                "subnet-018f8c0a5cc0e7fb7"
+            ],
+            "securityGroups": [
+                "sg-02e4fb9d70cc541f6"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    },
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "CODE_DEPLOY"
+    },
+    "tags": [
+        {
+            "key": "auto-delete",
+            "value": "never"
+        }
+    ],
+    "enableECSManagedTags": true,
+    "propagateTags": "TASK_DEFINITION"
+}
