@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM public.ecr.aws/ubuntu/ubuntu:22.04_stable
 
 RUN apt-get update
 RUN apt-get install -y nginx
